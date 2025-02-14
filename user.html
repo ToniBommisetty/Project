@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <!-- Nav Bar -->
+    <header>
+        <a href="#" class="logo"><i class='bx bxs-t-shirt'></i> Adidas</a>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#profile" id="profile-link" onclick="showprofile()">Profile</a></li>
+            <li><a href="#orders" id="orders-link" onclick="showorder()">Orders</a></li>
+            <li><a href="frontpage.html" id="logout-link">Logout</a></li>
+        </ul>
+    </header>
+
+    <section class="user-dashboard" id="user-dashboard">
+        <div class="dashboard-content" id="dashboard-content">
+            <!-- Profile Content -->
+            <div class="dashboard-box" id="profile-content"  style="display: none;">
+                <div>
+                    <div class="profile">
+                        <img src="Images/profile-pic.png" alt="profile-pic">
+                    </div>
+                </div>
+                <h2>Your Profile</h2>
+                <p>Name: Toni Bommisetty</p>
+                <p>Email: Tonibommisetty@gmail.com</p>
+                <a href="#edit-profile.html" class="btn" id="edt-profile">Edit Profile</a>
+            </div>
+
+            <!-- Orders Content -->
+            <div class="dashboard-box" id="orders-content" style="display: none;">
+                <h2>Your Orders</h2>
+                <p>No orders placed yet.</p>
+                <a href="#view-orders" class="btn">View Orders</a>
+            </div>
+
+            <!-- Edit Profile Form -->
+            <div class="edit-profile" id="myPopup" style="display: none;">
+                <div class="close">
+                    <i class='bx bx-window-close' onclick="closeForm()"></i>
+                </div>
+                <h2>Update your Profile</h2>
+                <label for="">Username</label>
+                <input type="text" name="" id="" placeholder="Update username"><br>
+                <label for="">Password</label>
+                <input type="password" name="" id="" placeholder="Update password"><br>
+                <label for="">Email</label>
+                <input type="text" name="" id="" placeholder="Update email"><br>
+                <label for="">Contact</label>
+                <input type="tel" name="" id="" placeholder="Update contact"><br>
+                <label for="">Profile Name</label>
+                <input type="text" name="" id="" placeholder="Update profile name"><br>
+                <input type="submit" value="Update" class="upt-btn">
+            </div>
+        </div>
+    </section>
+
+    <!-- User Dashboard -->
+         <!---Home-->
+         <section class="home" id="home">
+            <div class="home-text">
+                <h1>Welcome to Your <br>Dashboard</h1>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+            <div class="home-img">
+                <img src="Images/home.png" alt="Home Image">
+            </div>
+        </section>
+        <!----New Arrivals-->
+        <section class="new" id="new">
+            <div class="heading">
+                <h1>New <span>Arrival</span></h1>
+            </div>
+            <div class="swiper new-arrival">
+                <div class="swiper-wrapper ">
+                    <div class="swiper-slide box">
+                        <img src="Images/new1.jpg" alt="">
+                        <div class="content">
+                            <a href="#" class="btn">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide box">
+                        <img src="Images/Tshirt3.jpeg" alt="">
+                        <div class="content">
+                            <a href="#" class="btn">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide box">
+                        <img src="Images/Tshirt4.jpeg" alt="">
+                        <div class="content">
+                            <a href="#" class="btn">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide box">
+                        <img src="Images/Tshirt5.png" alt="">
+                        <div class="content">
+                            <a href="#" class="btn">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-----Product-->
+        <section class="products" id="products">
+            <div class="heading">
+                <h1>Our <span>Products</span></h1>
+            </div>
+            <div class="product-container">
+                <div class="box">
+                    <img src="Images/Products1.webp" alt="">
+                    <div class="content">
+                        <h2>T-Shirt 14A</h2>
+    
+                        <div class="stars">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <span>$50.05</span>
+                        <i class='bx bx-cart-alt' ></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="Images/Products2.webp" alt="">
+                    <div class="content">
+                        <h2>T-Shirt 14A</h2>
+    
+                        <div class="stars">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <span>$50.05</span>
+                        <i class='bx bx-cart-alt' ></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="Images/Products3.webp" alt="">
+                    <div class="content">
+                        <h2>T-Shirt 14A</h2>
+    
+                        <div class="stars">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <span>$50.05</span>
+                        <i class='bx bx-cart-alt' ></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="Images/Products4.webp" alt="">
+                    <div class="content">
+                        <h2>T-Shirt 14A</h2>
+    
+                        <div class="stars">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <span>$50.05</span>
+                        <i class='bx bx-cart-alt' ></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="Images/Products5.webp" alt="">
+                    <div class="content">
+                        <h2>T-Shirt 14A</h2>
+    
+                        <div class="stars">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <span>$50.05</span>
+                        <i class='bx bx-cart-alt' ></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="Images/Products6.webp" alt="">
+                    <div class="content">
+                        <h2>T-Shirt 14A</h2>
+    
+                        <div class="stars">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <span>$50.05</span>
+                        <i class='bx bx-cart-alt' ></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="Images/Products7.webp" alt="">
+                    <div class="content">
+                        <h2>T-Shirt 14A</h2>
+    
+                        <div class="stars">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <span>$50.05</span>
+                        <i class='bx bx-cart-alt' ></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="Images/Products8.webp" alt="">
+                    <div class="content">
+                        <h2>T-Shirt 14A</h2>
+    
+                        <div class="stars">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <span>$50.05</span>
+                        <i class='bx bx-cart-alt' ></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="reviews" id="reviews">
+            <div class="heading">
+                <h1>Our <span>Customer's</span></h1>
+            </div>
+            <div class="reviews-container">
+                <div class="box">
+                    <img src="Images/new1.jpg" alt="">
+                    <div class="stars">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star-half'></i>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                    <h2>Will Smith</h2>
+                </div>
+                <div class="box">
+                    <img src="Images/Review.png" alt="">
+                    <div class="stars">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star-half'></i>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                    <h2>Will Smith</h2>
+                </div>
+                <div class="box">
+                    <img src="Images/Products1.webp" alt="">
+                    <div class="stars">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star-half'></i>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                    <h2>Will Smith</h2>
+                </div>
+            </div>
+        </section>
+
+
+    <!-- Footer -->
+    <section class="footer">
+        <div class="footer-box">
+            <h2>adidas</h2>
+            <p>Orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            <div class="social">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-tiktok'></i></a>
+            </div>
+        </div>
+        <div class="footer-box">
+            <h3>Support</h3>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Help & Support</a></li>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Term of use</a></li>
+            <li><a href="#">FAQ</a></li>
+        </div>
+        <div class="footer-box">
+            <h3>Our Branches</h3>
+            <li><a href="#">India</a></li>
+            <li><a href="#">Phillippines</a></li>
+            <li><a href="#">United Kingdom</a></li>
+            <li><a href="#">Pakistan</a></li>
+            <li><a href="#">United states of America</a></li>
+        </div>
+        <div class="footer-box">
+            <h3>Payment Method</h3>
+            <div class="payment">
+                <img src="Images/visa.png" alt="">
+                <img src="Images/mastercard.png" alt="">
+                <img src="Images/paypal.png" alt="">
+                <img src="Images/american-express.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Copyright -->
+    <div class="copyright">
+        <p>&#169; CarpoolVenom All Right Reserved.</p>
+    </div>
+
+    <!-- Link To JS -->
+    <script src="main.js"></script>
+</body>
+</html>
